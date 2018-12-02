@@ -1,23 +1,46 @@
 # vue-capacitor-data-storage-sqlite
+Sample project that shows an integration of [capacitor-data-storage-sqlite Capacitor Plugin](https://github.com/jepiqueau/capacitor-data-storage-sqlite) 
+in Vue.js App.
 
 ## Project setup
+To start a new project using Vue.js, clone this repo to a new directory:
+
+```bash
+git clone https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite.git my-app
+cd my-app
+git remote rm origin
 ```
+
+```bash
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and builds targeted platforms
+```bash
+npx cap update
+npm run build
+npx cap copy
+npx cap copy web
 ```
+
+#### Web
+```bash
 npm run serve
 ```
+#### IOS
+```bash
+npx cap open ios
+```
 
-### Compiles and minifies for production
-```
-npm run build
+#### Android
+```bash
+npx cap open android
 ```
 
-### Run your tests
-```
-npm run test
+#### Electron
+```bash
+cd electron
+npm run electron:start
 ```
 
 ### Lints and fixes files
@@ -25,5 +48,6 @@ npm run test
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Start Project from scratch
+[from scratch]("https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite#project-creation")
+

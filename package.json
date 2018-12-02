@@ -7,7 +7,18 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
+  "keywords": [
+    "Vue",
+    "Capacitor",
+    "plugin",
+    "sqlite"
+  ],
   "dependencies": {
+    "@capacitor/android": "^1.0.0-beta.11",
+    "@capacitor/cli": "^1.0.0-beta.11",
+    "@capacitor/core": "^1.0.0-beta.11",
+    "@capacitor/ios": "^1.0.0-beta.11",
+    "capacitor-data-storage-sqlite": "0.0.8-1",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
@@ -21,5 +32,15 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "vue-template-compiler": "^2.5.17"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite.git"
+  },
+  "author": "Jean Pierre Quéau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite/issues"
+  },
+  "homepage": "https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite#readme"
 }

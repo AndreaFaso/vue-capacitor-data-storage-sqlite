@@ -1,0 +1,37 @@
+PODS:
+  - Capacitor (1.0.0-beta.10):
+    - CapacitorCordova (= 1.0.0-beta.10)
+  - CapacitorCordova (1.0.0-beta.10)
+  - CapacitorDataStorageSqlite (0.0.8-1):
+    - Capacitor
+    - SQLite.swift
+  - SQLite.swift (0.11.5):
+    - SQLite.swift/standard (= 0.11.5)
+  - SQLite.swift/standard (0.11.5)
+
+DEPENDENCIES:
+  - "Capacitor (from `../../node_modules/@capacitor/ios`)"
+  - "CapacitorCordova (from `../../node_modules/@capacitor/ios`)"
+  - CapacitorDataStorageSqlite (from `/Users/queaujeanpierre/Documents/ProjectswithCapacitor/publishProjects/vuejs-capacitor-apps/new/vue-capacitor-data-storage-sqlite/node_modules/capacitor-data-storage-sqlite`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SQLite.swift
+
+EXTERNAL SOURCES:
+  Capacitor:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorCordova:
+    :path: "../../node_modules/@capacitor/ios"
+  CapacitorDataStorageSqlite:
+    :path: "/Users/queaujeanpierre/Documents/ProjectswithCapacitor/publishProjects/vuejs-capacitor-apps/new/vue-capacitor-data-storage-sqlite/node_modules/capacitor-data-storage-sqlite"
+
+SPEC CHECKSUMS:
+  Capacitor: 9aa60986d00166b45b3216daf90f49f8df6593fa
+  CapacitorCordova: aab520b872cabe0d9f30a03dc385c5dce8d2c82b
+  CapacitorDataStorageSqlite: 14380cbb2064174dfaed2e63f62fbe471c91dee2
+  SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+
+PODFILE CHECKSUM: 00e8dd2d548296290845cd002dd87723bd095e6e
+
+COCOAPODS: 1.5.3
