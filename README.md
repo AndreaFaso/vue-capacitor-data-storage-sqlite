@@ -49,5 +49,5 @@ npm run lint
 ```
 
 ## Start Project from scratch
-[from scratch]("https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite#project-creation")
+[from scratch]("https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite#projectcreation")
 
