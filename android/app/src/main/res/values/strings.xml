@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">VueCapacitorDataStorageSqlite</string>
-    <string name="title_activity_main">VueCapacitorDataStorageSqlite</string>
-    <string name="package_name">com.jeep.app.vuecapacitordatastoragesqlite</string>
-    <string name="fileprovider_authority">com.jeep.app.vuecapacitordatastoragesqlite.fileprovider</string>
-    <string name="custom_url_scheme">com.jeep.app.vuecapacitordatastoragesqlite</string>
-</resources>

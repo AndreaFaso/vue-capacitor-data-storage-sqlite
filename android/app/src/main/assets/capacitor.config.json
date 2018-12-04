@@ -1,6 +1,0 @@
-{
-  "appId": "com.jeep.app.vuecapacitordatastoragesqlite",
-  "appName": "VueCapacitorDataStorageSqlite",
-  "bundledWebRuntime": false,
-  "webDir": "dist"
-}

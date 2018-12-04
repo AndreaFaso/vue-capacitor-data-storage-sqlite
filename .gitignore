@@ -1,9 +1,9 @@
 .DS_Store
 node_modules
-dist
-android
-ios
-electron
+/dist
+/android
+/ios
+/electron
 
 # local env files
 .env.local
