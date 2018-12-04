@@ -14,6 +14,22 @@ git remote rm origin
 ```bash
 npm install
 ```
+### Adding Capacitor to your project
+
+```bash
+npm install --save @capacitor/core @capacitor/cli
+npx cap init VueCapacitorDataStorageSqlite com.example.vuecapacitordatastoragesqlite
+```
+Tell Capacitor where to look for the built files by replacing "www" by "dist" in the file capacitor.config.json
+
+```
+{
+  "appId": "com.example.vuecapacitordatastoragesqlite",
+  "appName": "VueCapacitorDataStorageSqlite",
+  "bundledWebRuntime": false,
+  "webDir": "dist"
+}
+```
 
 ### Compiles and builds targeted platforms
 ```bash

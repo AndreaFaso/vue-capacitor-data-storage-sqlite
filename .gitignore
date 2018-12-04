@@ -1,6 +1,9 @@
 .DS_Store
 node_modules
-/dist
+dist
+android
+ios
+electron
 
 # local env files
 .env.local
@@ -12,6 +15,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Editor directories and files
+.gradle
 .idea
 .vscode
 *.suo
@@ -19,3 +23,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw*
+capacitor.config.json
