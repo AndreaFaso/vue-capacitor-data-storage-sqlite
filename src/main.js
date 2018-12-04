@@ -4,7 +4,14 @@ import router from "./router";
 import store from "./store";
 
 Vue.config.productionTip = false;
-
+Vue.config.ignoredElements = [
+  "ion-app",
+  "ion-header",
+  "ion-toolbar",
+  "ion-title",
+  "ion-content",
+  "ion-button"
+];
 new Vue({
   router,
   store,
