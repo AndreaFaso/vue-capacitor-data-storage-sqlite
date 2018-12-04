@@ -30,8 +30,19 @@ Tell Capacitor where to look for the built files by replacing "www" by "dist" in
   "webDir": "dist"
 }
 ```
+### Create the *dist* folder with the built files
+```bash
+npm run build
+```
 
-### Compiles and builds targeted platforms
+### Adding Platforms
+```bash
+npx cap add android
+npx cap add ios
+npx cap add electron
+```
+
+### Building App for Targeted Platforms
 ```bash
 npx cap update
 npm run build
