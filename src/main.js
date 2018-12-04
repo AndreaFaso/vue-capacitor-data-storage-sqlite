@@ -2,16 +2,10 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import Ionic from "@ionic/vue";
 
-Vue.config.productionTip = false;
-Vue.config.ignoredElements = [
-  "ion-app",
-  "ion-header",
-  "ion-toolbar",
-  "ion-title",
-  "ion-content",
-  "ion-button"
-];
+Vue.use(Ionic);
+
 new Vue({
   router,
   store,
