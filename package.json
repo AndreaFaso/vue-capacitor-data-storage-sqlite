@@ -1,6 +1,6 @@
 {
   "name": "vue-capacitor-data-storage-sqlite",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -20,7 +20,7 @@
     "@capacitor/ios": "^1.0.0-beta.11",
     "@ionic/core": "^4.0.0-beta.17",
     "@ionic/vue": "0.0.1",
-    "capacitor-data-storage-sqlite": "0.0.8-1",
+    "capacitor-data-storage-sqlite": "0.0.9",
     "vue": "^2.5.17",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
