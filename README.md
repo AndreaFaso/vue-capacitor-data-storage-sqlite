@@ -492,6 +492,17 @@ export default {
 };
 </script>
 ```
+#### Add a vue.config.js file 
+Add a vue.config.js file in your project root folder which should contain
+
+```
+// vue.config.js
+module.exports = {
+  baseUrl: "./"
+};
+```
+
+The modification of the baseUrl is required to have the Electron App working;
 
 ### Build your project
 
