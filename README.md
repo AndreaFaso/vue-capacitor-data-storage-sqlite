@@ -531,7 +531,7 @@ npx cap copy web
 npm run serve
 ```
 
-open your browser http://192.168.1.78:8080/ 
+open your browser http://localhost:8080 
 
 ##### IOS Platform
 ```bash
