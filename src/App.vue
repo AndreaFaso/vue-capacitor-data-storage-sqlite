@@ -1,5 +1,5 @@
 <template>
-<ion-app>
-   <router-view></router-view>
-</ion-app>
+  <ion-app>
+    <router-view></router-view>
+  </ion-app>
 </template>

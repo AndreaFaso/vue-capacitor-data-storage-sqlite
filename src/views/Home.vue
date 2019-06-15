@@ -10,7 +10,10 @@
 
     <ion-content padding>
       The world is your oyster.
-      <p>If you get lost, the <a href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+      <p>
+        If you get lost, the
+        <a href="https://ionicframework.com/docs">docs</a> will be your guide.
+      </p>
       <ion-button @click="goToAbout" full>Go to About</ion-button>
       <ion-button @click="showDialogAlert" full>Show Alert Box</ion-button>
       <ion-button @click="showToast" full>Show Toast</ion-button>
@@ -59,9 +62,7 @@
 import { Plugins } from "@capacitor/core";
 import { CapacitorDataStorageSqlite } from "capacitor-data-storage-sqlite";
 
-const { Toast } = Plugins;
-const { Modals } = Plugins;
-const { Device } = Plugins;
+const { Toast, Modals, Device  } = Plugins;
 
 export default {
   name: "Home",
@@ -93,6 +94,7 @@ export default {
       } else {
         storage = CapacitorDataStorageSqlite;
       }
+
       //populate some data
       //string
       let retpopulate = false;
@@ -109,6 +111,9 @@ export default {
       result = await storage.get({ key: "session" });
       let ret1 = false;
       if (result.value === "Session Opened") ret1 = true;
+      result = await storage.get({ key: "session1" });
+      let ret1a = false;
+      if (result.value === null) ret1a = true;
       // json
       let data = { a: 20, b: "Hello World", c: { c1: 40, c2: "cool" } };
       await storage.set({ key: "testJson", value: JSON.stringify(data) });
@@ -121,7 +126,7 @@ export default {
       result = await storage.get({ key: "testNumber" });
       let ret3 = false;
       if (result.value === data1.toString()) ret3 = true;
-      if (ret1 && ret2 && ret3) retpopulate = true;
+      if (ret1 && ret1a && ret2 && ret3) retpopulate = true;
       if (retpopulate)
         document.querySelector(".populate").classList.remove("hidden");
 
