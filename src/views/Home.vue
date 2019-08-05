@@ -60,9 +60,9 @@
 
 <script>
 import { Plugins } from "@capacitor/core";
-import * as CapacitorSQLWebPlugin from 'capacitor-data-storage-sqlite';
+import * as CapacitorSQLWebPlugin from "capacitor-data-storage-sqlite";
 
-const { Toast, Modals, Device, CapacitorDataStorageSqlite  } = Plugins;
+const { Toast, Modals, Device, CapacitorDataStorageSqlite } = Plugins;
 
 export default {
   name: "Home",
@@ -88,13 +88,13 @@ export default {
       pltEl.textContent = info.platform;
       pltEl.classList.remove("hidden");
       let storage = {};
-      console.log('platform ',info.platform)
+      console.log("platform ", info.platform);
 
       if (info.platform === "ios" || info.platform === "android") {
         storage = CapacitorDataStorageSqlite;
-        console.log('storage in ios android ',storage)
+        console.log("storage in ios android ", storage);
       } else {
-        console.log('storage in web ');
+        console.log("storage in web ");
         storage = CapacitorSQLWebPlugin.CapacitorDataStorageSqlite;
       }
 
@@ -111,7 +111,7 @@ export default {
         key: "session",
         value: "Session Opened"
       });
-      console.log('*** result ',result)
+      console.log("*** result ", result);
       result = await storage.get({ key: "session" });
       let ret1 = false;
       if (result.value === "Session Opened") ret1 = true;
