@@ -74,7 +74,7 @@ import android.os.Bundle;
 
 import com.getcapacitor.BridgeActivity;
 import com.getcapacitor.Plugin;
-import com.jeep.plugin.CapacitorDataStorageSqlite;
+import com.jeep.plugin.capacitor.capacitordatastoragesqlite.CapacitorDataStorageSqlite;
 
 import java.util.ArrayList;
 
@@ -555,7 +555,7 @@ import android.os.Bundle;
 
 import com.getcapacitor.BridgeActivity;
 import com.getcapacitor.Plugin;
-import com.jeep.plugin.CapacitorDataStorageSqlite;
+import com.jeep.plugin.capacitor.capacitordatastoragesqlite.CapacitorDataStorageSqlite;
 
 import java.util.ArrayList;
 
@@ -582,6 +582,11 @@ and make Update when asked
 When all this is done and your buid is succesful, click on the run project button and select your device or emulator, the application will launch and display four buttons.
 
 ##### Electron platform
+```bash 
+npx cap open electron 
+``` 
+or 
+
 ```bash
 cd electron
 npm run electron:start
