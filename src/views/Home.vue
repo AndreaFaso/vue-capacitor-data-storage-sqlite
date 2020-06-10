@@ -18,6 +18,10 @@
       <ion-button @click="showDialogAlert" full>Show Alert Box</ion-button>
       <ion-button @click="showToast" full>Show Toast</ion-button>
       <ion-button @click="testSqlite" full>Test Plugin SQL</ion-button>
+      <ion-button @click="setTables" full>Set Tables</ion-button>
+      <ion-button @click="getTable('saveData')" full>Get Table1</ion-button>
+      <ion-button @click="getTable('users')" full>Get Table2</ion-button>
+      <ion-button @click="getTable('myStore')" full>Get Table3</ion-button>
 
       <p class="platform hidden"></p>
 
@@ -63,7 +67,31 @@ import { Plugins } from "@capacitor/core";
 import * as CapacitorSQLWebPlugin from "capacitor-data-storage-sqlite";
 
 const { Toast, Modals, Device, CapacitorDataStorageSqlite } = Plugins;
+const DB_NAME = "test_tables";
 
+async function getStorage() {
+  const info = await Device.getInfo();
+  let storage = {};
+  if (info.platform === "ios" || info.platform === "android") {
+    storage = CapacitorDataStorageSqlite;
+  } else {
+    storage = CapacitorSQLWebPlugin.CapacitorDataStorageSqlite;
+  }
+  return storage;
+}
+async function database(table) {
+  const storage = await getStorage();
+  const { result: db } = await storage.openStore({
+    database: DB_NAME
+  });
+
+  if (!db)
+    return Promise.reject(`Couldn't open the store with database "${DB_NAME}"`);
+
+  const { result, message } = await storage.setTable({ table });
+
+  return result ? Promise.resolve(storage) : Promise.reject(message);
+}
 export default {
   name: "Home",
   methods: {
@@ -82,21 +110,47 @@ export default {
         duration: 150
       });
     },
+    async setTables() {
+      var storage = await database("saveData");
+      // eslint-disable-next-line no-unused-vars
+      var result = await storage.set({
+        key: "message1",
+        value: "Welcome from Jeep"
+      });
+      result = await storage.set({ key: "message2", value: "Hello World!" });
+      storage = await database("users");
+      result = await storage.set({
+        key: "user1",
+        value: JSON.stringify({
+          age: 50,
+          name: "jeep",
+          email: "jeep@example.com"
+        })
+      });
+      result = await storage.set({
+        key: "user2",
+        value: JSON.stringify({
+          age: 35,
+          name: "jones",
+          email: "jones@example.com"
+        })
+      });
+      storage = await database("myStore");
+      result = await storage.set({ key: "a", value: "251.35" });
+      result = await storage.set({ key: "session", value: "expired" });
+    },
+    async getTable(table) {
+      const storage = await database(table);
+      const { keysvalues } = await storage.keysvalues();
+      console.log(`***  table: ${table} ***`);
+      console.log(keysvalues);
+    },
     async testSqlite() {
       const info = await Device.getInfo();
       const pltEl = document.querySelector(".platform");
       pltEl.textContent = info.platform;
       pltEl.classList.remove("hidden");
-      let storage = {};
-      console.log("platform ", info.platform);
-
-      if (info.platform === "ios" || info.platform === "android") {
-        storage = CapacitorDataStorageSqlite;
-        console.log("storage in ios android ", storage);
-      } else {
-        console.log("storage in web ");
-        storage = CapacitorSQLWebPlugin.CapacitorDataStorageSqlite;
-      }
+      const storage = await getStorage();
 
       //populate some data
       //string
@@ -108,9 +162,12 @@ export default {
       let retremove = false;
       let retclear = false;
       let resOpen = await storage.openStore({});
-      console.log('resOpen  ',resOpen )
+      console.log("resOpen  ", resOpen);
       if (resOpen) {
-        let result = await storage.set({key:"session",value:"Session Opened"});
+        let result = await storage.set({
+          key: "session",
+          value: "Session Opened"
+        });
         console.log("Save Data : " + result.result);
         result = await storage.get({ key: "session" });
         let ret1 = false;
