@@ -1,52 +1,51 @@
 {
-  "name": "vue-capacitor-data-storage-sqlite",
-  "version": "1.2.1",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "keywords": [
-    "Vue",
-    "Capacitor",
-    "plugin",
-    "sqlite"
-  ],
-  "dependencies": {
-    "@capacitor/android": "latest",
-    "@capacitor/cli": "latest",
-    "@capacitor/core": "latest",
-    "@capacitor/ios": "latest",
-    "@ionic/core": "^4.10.0",
-    "@ionic/pwa-elements": "^1.3.0",
-    "@ionic/vue": "0.0.9",
-    "capacitor-data-storage-sqlite": "latest",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.3",
-    "vuex": "^3.1.1"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.11.0",
-    "@vue/cli-plugin-eslint": "^3.11.0",
-    "@vue/cli-service": "^3.11.0",
-    "@vue/eslint-config-prettier": "^5.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.3.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-vue": "^5.2.3",
-    "lodash": "4.17.19",
-    "prettier": "^1.18.2",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite.git"
-  },
-  "author": "Jean Pierre Quéau",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite/issues"
-  },
-  "homepage": "https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite#readme"
+    "name": "vue-capacitor-data-storage-sqlite",
+    "version": "1.2.1",
+    "private": true,
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint"
+    },
+    "keywords": [
+        "Vue",
+        "Capacitor",
+        "plugin",
+        "sqlite"
+    ],
+    "dependencies": {
+        "@capacitor/android": "latest",
+        "@capacitor/cli": "latest",
+        "@capacitor/core": "latest",
+        "@ionic/core": "^4.10.0",
+        "@ionic/pwa-elements": "^1.3.0",
+        "@ionic/vue": "0.0.9",
+        "capacitor-data-storage-sqlite": "latest",
+        "vue": "^2.6.10",
+        "vue-router": "^3.1.3",
+        "vuex": "^3.1.1"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^3.11.0",
+        "@vue/cli-plugin-eslint": "^3.11.0",
+        "@vue/cli-service": "^3.11.0",
+        "@vue/eslint-config-prettier": "^5.0.0",
+        "babel-eslint": "^10.0.3",
+        "eslint": "^6.3.0",
+        "eslint-plugin-prettier": "^3.1.0",
+        "eslint-plugin-vue": "^5.2.3",
+        "lodash": "4.17.19",
+        "prettier": "^1.18.2",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite.git"
+    },
+    "author": "Jean Pierre Quéau",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite/issues"
+    },
+    "homepage": "https://github.com/jepiqueau/vue-capacitor-data-storage-sqlite#readme"
 }
